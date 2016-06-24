@@ -4,11 +4,12 @@
   <div class="row">
     <div class="col-md-12">
         <div class="jumbotron">
-            <h2 class="h2-responsive">서울대 입구역, 맛집 2인자를 찾아라</h2>
+            <h2 class="h2-responsive" style="font-weight: bold;">서울대 입구역, 맛집 2인자를 찾아라</h2>
             <br>
-            <p>Big data & Data Crawling 기반 강력한 맛집 탐색 틀</p>
+            <p>Big data & Data Crawling 기반</p>
+            <p>강력한 맛집 검색 틀</p>
             <hr>
-            <p>지금 시작하세요</p>
+            <p style="margin-bottom: 0;">지금 시작하세요</p>
         </div>
     </div>
 </div>
@@ -37,7 +38,6 @@
               <!--Title-->
               <h4 class="card-title">망고플레이트</h4>
               <!--Text-->
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
               <button class="btn btn-primary" data-toggle="modal" data-target="#mangoplate">2등 찾기</button>
           </div>
           <!--/.Card content-->
@@ -47,35 +47,6 @@
       <!--/.Card-->
   </div>
   <!--First columnn-->
-
-  <!--Second columnn-->
-  <div class="col-md-4">
-      <!--Card-->
-      <div class="card">
-
-          <!--Card image-->
-          <div class="view overlay hm-white-slight">
-              <img src="<%= asset_path("diningcode.jpg") %>" class="img-fluid" alt="" height="350">
-              <a href="#">
-                  <div class="mask"></div>
-              </a>
-          </div>
-          <!--/.Card image-->
-
-          <!--Card content-->
-          <div class="card-block">
-              <!--Title-->
-              <h4 class="card-title">다이닝코드</h4>
-              <!--Text-->
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <button class="btn btn-primary" data-toggle="modal" data-target="#diningcode">2등 찾기</button>
-          </div>
-          <!--/.Card content-->
-
-      </div>
-      <!--/.Card-->
-  </div>
-  <!--Second columnn-->
 
   <!--Third columnn-->
   <div class="col-md-4">
@@ -96,7 +67,6 @@
               <!--Title-->
               <h4 class="card-title">포잉</h4>
               <!--Text-->
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
               <button class="btn btn-primary" data-toggle="modal" data-target="#poing">2등 찾기</button>
           </div>
           <!--/.Card content-->
@@ -105,6 +75,34 @@
       <!--/.Card-->
     </div>
     <!--Third columnn-->
+    
+    <!--Second columnn-->
+  <div class="col-md-4">
+      <!--Card-->
+      <div class="card">
+
+          <!--Card image-->
+          <div class="view overlay hm-white-slight">
+              <img src="<%= asset_path("diningcode.jpg") %>" class="img-fluid" alt="" height="350">
+              <a href="#">
+                  <div class="mask"></div>
+              </a>
+          </div>
+          <!--/.Card image-->
+
+          <!--Card content-->
+          <div class="card-block">
+              <!--Title-->
+              <h4 class="card-title">다이닝코드</h4>
+              <!--Text-->
+              <button class="btn btn-primary" data-toggle="modal" data-target="#diningcode">2등 찾기</button>
+          </div>
+          <!--/.Card content-->
+
+      </div>
+      <!--/.Card-->
+  </div>
+  <!--Second columnn-->
   </div>
 </div>
 
@@ -119,8 +117,11 @@
         <h4 class="modal-title">by 망고플레이트</h4>
       </div>
       <div class="modal-body">
-        <p><%= @place_p %></p>
-        <div style="background-size: 100%; width:200px; height:200px; <%=@img_p%>; background-repeat:no-repeat;"></div>
+        <p><%= @place_m %>
+        <div style="width:360px; height:240px; <%=@img_m%>; background-size: cover; background-repeat:no-repeat;"></div></p>
+        <a href="https://search.naver.com/search.naver?where=nexearch&query=서울대입구역+<%=@place_m%>&sm=top_hty&fbm=1&ie=utf8">
+          <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQuUelYDLbvsq7R9TY9Vus2i0USyfRIu__cjkMZ4pPyrFUUejyx" width="25" height="25">검색
+        </a>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -164,7 +165,7 @@
       </div>
       <div class="modal-body">
         <p><%= @place_p %> <!-- 포잉 이름 -->
-          <div style="background-size: 100%; width:200px; height:200px; <%=@img_p%>; background-repeat:no-repeat;"></div> <!-- 포잉 이미지 --></p>
+          <div style="background-size: 100%; width:360px; height:240px; <%=@img_p%>; background-repeat:no-repeat;"></div> <!-- 포잉 이미지 --></p>
             <a href="https://search.naver.com/search.naver?where=nexearch&query=서울대입구역+<%=@place_p%>&sm=top_hty&fbm=1&ie=utf8">
               <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQuUelYDLbvsq7R9TY9Vus2i0USyfRIu__cjkMZ4pPyrFUUejyx" width="25" height="25">검색
             </a>
