@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root "home#crw"
   get 'home/crw'
 
   # The priority is based upon order of creation: first created -> highest priority.
