@@ -41,6 +41,7 @@
               <button class="btn btn-primary" data-toggle="modal" data-target="#mangoplate">2등 찾기</button>
           </div>
           <!--/.Card content-->
+          
 
       </div>
       <!--/.Card-->
@@ -118,7 +119,8 @@
         <h4 class="modal-title">by 망고플레이트</h4>
       </div>
       <div class="modal-body">
-        <p>Some text in the modal.</p>
+        <p><%= @place_p %></p>
+        <div style="background-size: 100%; width:200px; height:200px; <%=@img_p%>; background-repeat:no-repeat;"></div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
