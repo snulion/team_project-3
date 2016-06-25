@@ -1,9 +1,11 @@
 
 <div style="background-image: url(<%= asset_path("bg_img.jpg")%>); width: 100%; height:680px; background-repeat: no-repeat;";>
   <div class="col-md-8 col-md-offset-2" style="text-align: center; padding-top: 140px;">
-    <h2 style="font-size:3.5em; font-weight: bold; color:white;">서울대 입구역, 맛집 2인자를 찾아라</h2>
+    <h2 style="font-size:3.5em; font-weight: bold; color:white;">서울대 입구역 맛집, 오직 2인자만 찾는다!</h2>
     <br>
-    <p style="font-size:1.6em; font-weight: medium; color:white;">우리는 왜 2인자에 주목하지 않는가</p>
+    <p style="font-size:1.6em; font-weight: medium; color:white;">2인자는 덜 기다려도 된다</p>
+    <p style="font-size:1.6em; font-weight: medium; color:white;">1인자나 2인자나 고만고만한 맛이다</p>
+    <p style="font-size:1.6em; font-weight: medium; color:white;">2인자는 노력한다</p>
     <br>
     <hr style="background: #fff;">
     <br>
@@ -114,18 +116,18 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">by 포잉</h4>
+        <h4 class="modal-title" style="text-align: center;"><%= @place_p %></h4>
       </div>
       <div class="modal-body">
-        <p><%= @place_p %> <!-- 포잉 이름 -->
-          <div style="background-size: 100%; width:360px; height:240px; <%=@img_p%>; background-repeat:no-repeat;"></div> <!-- 포잉 이미지 --></p>
-            <a href="https://search.naver.com/search.naver?where=nexearch&query=서울대입구역+<%=@place_p%>&sm=top_hty&fbm=1&ie=utf8">
-              <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQuUelYDLbvsq7R9TY9Vus2i0USyfRIu__cjkMZ4pPyrFUUejyx" width="25" height="25">검색
-            </a>
-          </div>
+        <div style="width:100%; height:400px; <%=@img_p%>; background-repeat:no-repeat;"></div> <!-- 포잉 이미지 -->
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <div>
+          <a href="https://search.naver.com/search.naver?where=nexearch&query=서울대입구역+<%=@place_m%>&sm=top_hty&fbm=1&ie=utf8" style="text-align:middle;">
+            <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQuUelYDLbvsq7R9TY9Vus2i0USyfRIu__cjkMZ4pPyrFUUejyx" width="20" height="20" style="margin-right:6px;">
+            <p style="display: inline;">네이버 검색하기</p>
+          </a>
+        </div>
       </div>
     </div>
 </div>
