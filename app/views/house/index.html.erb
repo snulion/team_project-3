@@ -1,13 +1,15 @@
 
 <div style="background-image: url(<%= asset_path("bg_img.jpg")%>); width: 100%; height:680px; background-repeat: no-repeat;";>
-  <div class="col-md-8 col-md-offset-2" style="text-align: center; padding-top: 200px;">
+  <div class="col-md-8 col-md-offset-2" style="text-align: center; padding-top: 140px;">
     <h2 style="font-size:3.5em; font-weight: bold; color:white;">서울대 입구역, 맛집 2인자를 찾아라</h2>
     <br>
-    <p style="font-size:1.6em; font-weight: medium; color:white;">Big data & Data Crawling 기반</p>
-    <p style="font-size:1.6em; font-weight: medium; color:white;">강력한 맛집 검색 툴!</p>
+    <p style="font-size:1.6em; font-weight: medium; color:white;">우리는 왜 2인자에 주목하지 않는가</p>
     <br>
     <hr style="background: #fff;">
     <br>
+    <br>
+      <p style="font-size:1.2em; font-weight: medium; color:white;">Big data & Data Crawling 기반</p>
+      <p style="font-size:1.2em; font-weight: medium; color:white;">강력한 맛집 검색 툴!</p>
     <br>
       <p style="text-decoration:underline; text-align: center; font-size:1.6em; font-weight: medium; color:white; ">지금 시작하세요!</p>
   </div>
@@ -86,17 +88,18 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">by 망고플레이트</h4>
+        <h4 class="modal-title" style="text-align: center;"><%= @place_m %></h4>
       </div>
       <div class="modal-body">
-        <p><%= @place_m %>
-        <div style="width:360px; height:240px; <%=@img_m%>; background-size: cover; background-repeat:no-repeat;"></div></p>
-        <a href="https://search.naver.com/search.naver?where=nexearch&query=서울대입구역+<%=@place_m%>&sm=top_hty&fbm=1&ie=utf8">
-          <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQuUelYDLbvsq7R9TY9Vus2i0USyfRIu__cjkMZ4pPyrFUUejyx" width="25" height="25">검색
-        </a>
+        <div style="width:100%; height:400px; <%=@img_m%>; background-size: cover; background-repeat:no-repeat;"></div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <div>
+          <a href="https://search.naver.com/search.naver?where=nexearch&query=서울대입구역+<%=@place_m%>&sm=top_hty&fbm=1&ie=utf8" style="text-align:middle;">
+            <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQuUelYDLbvsq7R9TY9Vus2i0USyfRIu__cjkMZ4pPyrFUUejyx" width="20" height="20" style="margin-right:6px;">
+            <p style="display: inline;">네이버 검색하기</p>
+          </a>
+        </div>
       </div>
     </div>
     
@@ -126,7 +129,6 @@
       </div>
     </div>
 </div>
-<<<<<<< HEAD
 <br>
 <br>
   
@@ -134,7 +136,6 @@
 </div>
 
 
-=======
 
 
 <div id="map" style="width:350px;height:350px;"></div>
@@ -194,4 +195,3 @@ function displayMarker(place) {
     });
 }
 </script>
->>>>>>> 2df907410fd4ad9da62ec7155fe452f44444fddb
