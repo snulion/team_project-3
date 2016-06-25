@@ -1,20 +1,23 @@
-<!DOCTYPE html>
-<div style="background-image: url(<%= asset_path("bg_img.jpg")%>); width: 100%; height:680px; background-repeat: no-repeat;  ";>
 
-            <h2 class="h2-responsive" style="font-weight: bold;">서울대 입구역, 맛집 2인자를 찾아라</h2>
-            <br>
-            <p>Big data & Data Crawling 기반</p>
-            <p>강력한 맛집 검색 틀</p>
-            <hr>
-            <p style="margin-bottom: 0;">지금 시작하세요</p>
-
-  
+<div style="background-image: url(<%= asset_path("bg_img.jpg")%>); width: 100%; height:680px; background-repeat: no-repeat;";>
+  <div class="col-md-8 col-md-offset-2" style="text-align: center; padding-top: 90px;">
+    <h2 style="font-size:3.5em; font-weight: bold; color:white;">서울대 입구역 맛집, 오직 2인자만 찾는다!</h2>
+    <br>
+    <p style="font-size:1.6em; font-weight: medium; color:white;">2인자는 덜 기다려도 된다</p>
+    <p style="font-size:1.6em; font-weight: medium; color:white;">1인자나 2인자나 고만고만한 맛이다</p>
+    <p style="font-size:1.6em; font-weight: medium; color:white;">2인자는 노력한다</p>
+    <br>
+    <hr style="background: #fff;">
+    <br>
+    <br>
+      <p style="font-size:1.2em; font-weight: medium; color:white;">Big data & Data Crawling 기반</p>
+      <p style="font-size:1.2em; font-weight: medium; color:white;">강력한 맛집 검색 툴!</p>
+    <br>
+      <p style="text-decoration:underline; text-align: center; font-size:1.6em; font-weight: medium; color:white; ">지금 시작하세요!</p>
+  </div>
 </div>
 
 <div class="container" style="margin-top:50px">
-  <!--First row-->
-
-<!--/.First row-->
 
 <hr class="extra-margins">
 
@@ -87,18 +90,22 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">by 망고플레이트</h4>
+        <h4 class="modal-title" style="text-align: center;"><%= @place_m %></h4>
       </div>
       <div class="modal-body">
-        <p><%= @place_m %>
-        <div style="width:360px; height:240px; <%=@img_m%>; background-size: cover; background-repeat:no-repeat;"></div></p>
-        <a href="https://search.naver.com/search.naver?where=nexearch&query=서울대입구역+<%=@place_m%>&sm=top_hty&fbm=1&ie=utf8">
-          <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQuUelYDLbvsq7R9TY9Vus2i0USyfRIu__cjkMZ4pPyrFUUejyx" width="25" height="25">검색
-        </a>
-        <!-- <div id="map_<%=@place_m%>" style="width:350px;height:350px;"></div> -->
+        <div style="width:100%; height:400px; <%=@img_m%>; background-size: cover; background-repeat:no-repeat;"></div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <div>
+          <a href="https://search.naver.com/search.naver?where=nexearch&query=서울대입구역+<%=@place_m%>&sm=top_hty&fbm=1&ie=utf8" style="text-align:middle;">
+            <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQuUelYDLbvsq7R9TY9Vus2i0USyfRIu__cjkMZ4pPyrFUUejyx" width="20" height="20" style="margin-right:6px;">
+            <p style="display: inline;">네이버 검색하기</p>
+          </a>
+          <a href="	http://map.daum.net/link/search/서울대입구역+<%=@place_m%>" style="text-align:middle;">
+            <img src="https://lh5.ggpht.com/9g2NOflMfcHgL_diLPklvjmgghV_QSwS11t7PdWs6i4lRMxWWKcDc_jEkXnZDniJ3IN5=w300" width="20" height="20" style="margin-right:6px;">
+            <p style="display: inline;">다음지도 검색하기</p>
+          </a>
+        </div>
       </div>
     </div>
     
@@ -113,21 +120,83 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">by 포잉</h4>
+        <h4 class="modal-title" style="text-align: center;"><%= @place_p %></h4>
       </div>
       <div class="modal-body">
-        <p><%= @place_p %> <!-- 포잉 이름 -->
-          <div style="background-size: 100%; width:360px; height:240px; <%=@img_p%>; background-repeat:no-repeat;"></div> <!-- 포잉 이미지 --></p>
-            <a href="https://search.naver.com/search.naver?where=nexearch&query=서울대입구역+<%=@place_p%>&sm=top_hty&fbm=1&ie=utf8">
-              <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQuUelYDLbvsq7R9TY9Vus2i0USyfRIu__cjkMZ4pPyrFUUejyx" width="25" height="25">검색
-            </a>
-          </div>
-          <%= render :partial => "poying", locals: {poing_n: @place_p} %>
-
+        <div style="width:100%; height:400px; <%=@img_p%>; background-repeat:no-repeat;"></div> <!-- 포잉 이미지 -->
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <div>
+          <a href="https://search.naver.com/search.naver?where=nexearch&query=서울대입구역+<%=@place_p%>&sm=top_hty&fbm=1&ie=utf8" style="text-align:middle;">
+            <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQuUelYDLbvsq7R9TY9Vus2i0USyfRIu__cjkMZ4pPyrFUUejyx" width="20" height="20" style="margin-right:6px;">
+            <p style="display: inline;">네이버 검색하기</p>
+          </a>
+          <a href="	http://map.daum.net/link/search/서울대입구역+<%=@place_p%>" style="text-align:middle;">
+            <img src="https://lh5.ggpht.com/9g2NOflMfcHgL_diLPklvjmgghV_QSwS11t7PdWs6i4lRMxWWKcDc_jEkXnZDniJ3IN5=w300" width="20" height="20" style="margin-right:6px;">
+            <p style="display: inline;">다음지도 검색하기</p>
+          </a>
+        </div>
       </div>
     </div>
-    
-  </div>
 </div>
+<br>
+<br>
+  
+</div>
+</div>
+
+
+<script type="text/javascript" src="//apis.daum.net/maps/maps3.js?apikey=2782121bb3bac125a7aa23d04fe0ffd1&libraries=services"></script>
+<script>
+// 마커를 클릭하면 장소명을 표출할 인포윈도우 입니다
+var infowindow = new daum.maps.InfoWindow({zIndex:1});
+
+var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+    mapOption = {
+        center: new daum.maps.LatLng(37.566826, 126.9786567), // 지도의 중심좌표
+        level: 3 // 지도의 확대 레벨
+    };  
+
+// 지도를 생성합니다    
+var map = new daum.maps.Map(mapContainer, mapOption); 
+
+// 장소 검색 객체를 생성합니다
+var ps = new daum.maps.services.Places(); 
+
+// 키워드로 장소를 검색합니다
+ps.keywordSearch('서울대입구역 자연별곡', placesSearchCB); 
+
+// 키워드 검색 완료 시 호출되는 콜백함수 입니다
+function placesSearchCB (status, data, pagination) {
+    if (status === daum.maps.services.Status.OK) {
+
+        // 검색된 장소 위치를 기준으로 지도 범위를 재설정하기위해
+        // LatLngBounds 객체에 좌표를 추가합니다
+        var bounds = new daum.maps.LatLngBounds();
+
+        for (var i=0; i<data.places.length; i++) {
+            displayMarker(data.places[i]);    
+            bounds.extend(new daum.maps.LatLng(data.places[i].latitude, data.places[i].longitude));
+        }       
+
+        // 검색된 장소 위치를 기준으로 지도 범위를 재설정합니다
+        map.setBounds(bounds);
+    } 
+}
+
+// 지도에 마커를 표시하는 함수입니다
+function displayMarker(place) {
+    
+    // 마커를 생성하고 지도에 표시합니다
+    var marker = new daum.maps.Marker({
+        map: map,
+        position: new daum.maps.LatLng(place.latitude, place.longitude) 
+    });
+
+    // 마커에 클릭이벤트를 등록합니다
+    daum.maps.event.addListener(marker, 'click', function() {
+        // 마커를 클릭하면 장소명이 인포윈도우에 표출됩니다
+        infowindow.setContent('<div style="padding:5px;font-size:12px;">' + place.title + '</div>');
+        infowindow.open(map, marker);
+    });
+}
+</script>

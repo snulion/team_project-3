@@ -2,8 +2,8 @@
 <html>
 <head>
   <title>맛집의 2인자</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => false %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => false %>
   <%= csrf_meta_tags %>
   
   <meta charset="utf-8">
@@ -41,11 +41,11 @@
       <!--Collapse content-->
       <div class="collapse navbar-toggleable-xs" id="collapseEx">
         <!--Navbar Brand-->
-        <a class="navbar-brand" href="/" style="font-weight:bold; font-size: 1.1em; padding: 6.8px; color:white;">박명수와 콩진호</a>
+        <a class="navbar-brand" href="/" style="font-weight:bold; font-size: 1.5em; padding: 6.8px; color:white;">박명수와 콩진호</a>
         <!--Links-->
         <ul class="nav navbar-nav">
           <li class="nav-item">
-              <a class="nav-link" href="/house/about" style="color:white;">about</a>
+              <a class="nav-link" href="/house/about" style="color:white; padding-top:15px;">about</a>
           </li>
         </ul>
       <!--/.Collapse content-->
@@ -58,14 +58,11 @@
 <%= yield %>
 
 <!--Footer-->
-    <footer class="page-footer center-on-small-only primary-color-dark">
+    <footer class="page-footer" style="background-color: #00b89d;">
         <!--Copyright-->
-        <div class="footer-copyright">
-            <div class="container-fluid">
-                © 2016 Copyright
-
+            <div class="container-fluid" style="text-align: center;;">
+                <p>© 2016 Copyright</p>
             </div>
-        </div>
         <!--/.Copyright-->
 
     </footer>
